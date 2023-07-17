@@ -150,7 +150,7 @@
               <testFailureIgnore>true</testFailureIgnore>
               <shutdown>kill</shutdown> <!-- Use it if required-->
                 <suiteXmlFiles>
-				   <suiteXmlFile>output/flight.xml</suiteXmlFile>
+				   <suiteXmlFile>output/Errorvalidation.xml</suiteXmlFile>
 			   </suiteXmlFiles>
 
                 </configuration>

@@ -12,7 +12,8 @@ public class ErrorValidationTest extends BaseShoppingTest  {
   @Test
   public void LoginErrorValidatonTest() {
 	  LoginWebSiste.Login_Credentils("saibolloju@gmail.com", "Likithsai9");
-	      Assert.assertEquals("Incorrect email or password.",LoginWebSiste.getErrorMessage());      
+	      Assert.assertEquals("Incorrect email or password.",LoginWebSiste.getErrorMessage());     
+	      System.out.println("Completerd");
   }
   
 }
