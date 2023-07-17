@@ -1,6 +1,6 @@
 package RahulshettyWebsiteMain;
 import org.apache.commons.io.FileUtils;
-
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -27,11 +27,16 @@ public Login_page LoginWebSiste;
 		Properties pro= new Properties();
 		FileInputStream f= new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Rahulshetty\\resources\\GlobalData.Properties");
 		pro.load(f);
-	  String BrowserName=	pro.getProperty("browser")!=null ? System.getProperty("browser") : pro.getProperty("browser");
-	  if(BrowserName.equalsIgnoreCase("chrome")) {
+	  String BrowserName=	System.getProperty("browser")!=null ? System.getProperty("browser") : pro.getProperty("browser");
+		// String BrowserName=	pro.getProperty("browser");
+	  if(BrowserName.contains("chrome")) {
 	        ChromeOptions options = new ChromeOptions();
 	        options.addExtensions(new File("H:\\chromedrive\\extension_4_7_2_0.crx"));
+	        if(BrowserName.contains("headless")) {
+	          options.addArguments("headless");
+	        }
 	         driver = new ChromeDriver(options);
+	         driver.manage().window().setSize(new Dimension(1400,900));
 	  }
 	 else if(BrowserName.equalsIgnoreCase("Edge")){
 	  System.setProperty("WebDriver.edge.driver","edge.exe");

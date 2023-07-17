@@ -91,7 +91,7 @@
 
                 <configuration>
               <testFailureIgnore>true</testFailureIgnore>
-                <shutdown>kill</shutdown> <!-- Use it if required-->
+                 <shutdown>kill</shutdown> <!-- Use it if required-->
                 <suiteXmlFiles>
 				   <suiteXmlFile>output/flight.xml</suiteXmlFile>
 			   </suiteXmlFiles>
@@ -135,7 +135,7 @@
 <profile>
 			<id>Errorvalidation</id>
 			<build>
-				<pluginManagement><!-- lock down plugins versions to avoid using
+			<pluginManagement><!-- lock down plugins versions to avoid using
 					Maven defaults (may be moved to parent pom) -->
 					<plugins>
 						<plugin>
@@ -148,9 +148,9 @@
 
                 <configuration>
               <testFailureIgnore>true</testFailureIgnore>
-                <shutdown>kill</shutdown> <!-- Use it if required-->
+              <shutdown>kill</shutdown> <!-- Use it if required-->
                 <suiteXmlFiles>
-				   <suiteXmlFile>output/Errorvalidation.xml</suiteXmlFile>
+				   <suiteXmlFile>output/flight.xml</suiteXmlFile>
 			   </suiteXmlFiles>
 
                 </configuration>
@@ -159,8 +159,8 @@
 					</plugins>
 				</pluginManagement>
 			</build>
-		
 		</profile>
+		
 	</profiles>
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven
